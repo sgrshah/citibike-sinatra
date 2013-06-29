@@ -1,1 +1,10 @@
-<%= @data.inspect %>
+<h1>Index Page: Here are a list of Citibike locations</h1>
+
+<a href='/form'>start traveling</a>
+
+<ol>
+<% @data.each do |station|%>
+	<li><b>Station</b>: <%=station["name"]%>, <b>longitute</b>: <%=station["lng"]%>, <b>latitude</b>: <%=station["lat"]%></li>
+<% end %>
+
+</ol>
